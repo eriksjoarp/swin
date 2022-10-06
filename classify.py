@@ -1,14 +1,8 @@
 import os, sys
 
-############################        IMPORT HELPER MODULES       ############################
-sys.path.append(os.getcwd() + '/..')
-import python_imports
-for path in python_imports.dirs_to_import(): sys.path.insert(1, path)
-############################################################################################
-
-import vision_classifying
-import ml_helper_proj_params
-import constants_dataset
+from ..ai_helper import vision_classifying
+from ..ai_helper import ml_helper_proj_params
+from ..ai_helper import constants_dataset
 
 from huggingface_hub import notebook_login
 

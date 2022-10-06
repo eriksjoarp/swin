@@ -1,15 +1,5 @@
 import os, sys
 
-############################        IMPORT HELPER MODULES       ############################
-#DIR_PROJ = os.getcwd()
-#DIR_GIT = DIR_PROJ.parent.absolute()
-sys.path.insert(1, os.getcwd() + '''//..''')
-#sys.path.insert(1, DIR_GIT)
-import python_imports
-for path in python_imports.dirs_to_import(): sys.path.insert(1, path)
-############################################################################################
-sys.path.insert(1, r'''C:\\Users\\erikw\\git''')
-
 ##############      ToDo
 #
 #   augmentation, which ones, try with tiny
@@ -23,13 +13,11 @@ sys.path.insert(1, r'''C:\\Users\\erikw\\git''')
 #########################                     Finetuning Swin transformer model for image classification                   ################################
 
 # imports
-import constants_dataset
-import ml_helper_visualization
-import constants_ai_h
+from ..ai_helper import constants_dataset
+from ..ai_helper import constants_ai_h
 from transformers import AutoFeatureExtractor, SwinForImageClassification
 from datasets import load_dataset, load_metric
 from transformers import AutoModelForImageClassification, TrainingArguments, Trainer
-import numpy as np
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 import torch
 from PIL import Image

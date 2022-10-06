@@ -1,12 +1,14 @@
 from torchvision.transforms import ToTensor
 import gdal
 import rasterio
-import erik_functions_files
-import dataset_load_helper
 from fastai.vision.data import ImageList
 import PIL
 import torch
 import cv2
+
+from ..helper import erik_functions_files
+from ..ai_helper import dataset_load_helper
+
 
 def openMultiChannelImage(fpArr):
     '''

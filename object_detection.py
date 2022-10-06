@@ -4,16 +4,8 @@ from PIL import Image
 import requests
 import os, sys
 
-############################        IMPORT HELPER MODULES       ############################
-sys.path.insert(1, os.path.dirname(os.getcwd()))
-import python_imports
-for path in python_imports.dirs_to_import(): sys.path.insert(1, path)
-############################################################################################
-
-print(sys.path)
-
-import ml_helper_visualization
-import erik_functions_files
+from ..ai_helper import ml_helper_visualization
+from ..ai_helper import erik_functions_files
 
 
 url = "http://images.cocodataset.org/val2017/000000039769.jpg"
