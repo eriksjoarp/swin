@@ -18,17 +18,18 @@ from datasets import load_dataset
 from torch.utils.data import DataLoader
 from torchvision.datasets import ImageFolder
 import torch
+from helper import erik_functions_files
 
-import constants_dataset
-import ml_helper_training
+from ai_helper import constants_dataset
+from ai_helper import ml_helper_training
 
-import ml_helper_proj_params
-import constants_ai_h as c
-import erik_functions_files
-import ml_helper_visualization
-import dataset_load_helper
-import constants_dataset
+from ai_helper import ml_helper_proj_params
+from ai_helper import constants_ai_h as c
+from ai_helper import ml_helper_visualization
+from ai_helper import dataset_load_helper
+from ai_helper import constants_dataset
 import torchvision.transforms as transforms
+from ai_helper import torch_help_functions
 
 # turn off gradients during inference for memory effieciency
 def get_all_preds(network, dataloader):
@@ -90,6 +91,7 @@ pred_labels = []
 pred_labels_name = []
 
 label2id, id2label = dataset_load_helper.label_to_id(constants_dataset.FILE_LABELS_IMAGENET1K)
+
 
 with torch.no_grad():
     for i in range(images_nr):
