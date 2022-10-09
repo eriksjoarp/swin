@@ -13,8 +13,8 @@ import os, sys
 #########################                     Finetuning Swin transformer model for image classification                   ################################
 
 # imports
-from ..ai_helper import constants_dataset
-from ..ai_helper import constants_ai_h
+from ai_helper import constants_dataset
+from ai_helper import constants_ai_h
 from transformers import AutoFeatureExtractor, SwinForImageClassification
 from datasets import load_dataset, load_metric
 from transformers import AutoModelForImageClassification, TrainingArguments, Trainer
