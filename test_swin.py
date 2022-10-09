@@ -6,8 +6,8 @@ import PIL
 import torch
 import cv2
 
-from ..helper import erik_functions_files
-from ..ai_helper import dataset_load_helper
+from helper import erik_functions_files
+from ai_helper import dataset_load_helper
 
 
 def openMultiChannelImage(fpArr):
